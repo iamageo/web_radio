@@ -23,7 +23,7 @@ import java.io.IOException;
 public class HomeFragment extends Fragment {
 
     private Button btn_play;
-    private TextView text_status;
+
 
     String stream = "https://s1.guaracast.com:8427/stream";
 
@@ -37,10 +37,8 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         btn_play = root.findViewById(R.id.btn_play);
-        text_status = root.findViewById(R.id.status);
 
         btn_play.setEnabled(false);
-        text_status.setText("Loading..");
 
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -51,12 +49,12 @@ public class HomeFragment extends Fragment {
             if (started) {
                 started = false;
                 mediaPlayer.pause();
-                text_status.setText("PLAY");
+                btn_play.setText("PLAY");
 
             } else {
                 started = true;
                 mediaPlayer.start();
-                text_status.setText("PAUSE");
+                btn_play.setText("PAUSE");
 
             }
         });
@@ -83,7 +81,7 @@ public class HomeFragment extends Fragment {
         protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
             btn_play.setEnabled(true);
-            text_status.setText("PLAY");
+            btn_play.setText("PLAY");
         }
 
 
