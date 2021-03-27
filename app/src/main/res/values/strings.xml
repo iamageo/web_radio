@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ConexaoPororocav1</string>
+    <string name="app_name">Conexão Pororoca</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Conexão Pororoca</string>
@@ -10,4 +10,8 @@
     <string name="menu_home">Página Inicial</string>
     <string name="menu_gallery">Galeria de Imagens</string>
     <string name="menu_slideshow">Vídeos</string>
+
+    <string name="logo_splash">Logo conexão pororoca</string>
+
+
 </resources>
