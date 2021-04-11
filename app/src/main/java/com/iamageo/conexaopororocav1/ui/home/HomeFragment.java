@@ -24,7 +24,6 @@ public class HomeFragment extends Fragment {
 
     private Button btn_play;
 
-
     String stream = "https://s1.guaracast.com:8427/stream";
 
     boolean prepared = false;
@@ -37,8 +36,6 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         btn_play = root.findViewById(R.id.btn_play);
-
-        btn_play.setEnabled(false);
 
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
