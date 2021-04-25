@@ -2,15 +2,17 @@
     <!-- Base application theme. -->
     <style name="Theme.ConexaoPororocav1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#2979ff</item>
+        <item name="colorPrimaryVariant">#75a7ff</item>
+        <item name="colorPrimaryDark">#004ecb</item>
+
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondary">#81c784</item>
+        <item name="colorSecondaryVariant">#b2fab4</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_conexao</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

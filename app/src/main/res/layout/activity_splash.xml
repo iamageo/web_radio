@@ -8,51 +8,44 @@
     tools:context=".SplashActivity">
 
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#F3EDED"
-        android:cropToPadding="false"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pororoca1"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="252dp"
+        android:fontFamily="@font/roboto_mono_bold"
+        android:text="Conexão Pororoca"
+        android:textColor="#75a7ff"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#C86E6C6C"
-        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+    <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/waveHeader"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleY="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gifImageView">
-    </ImageView>
+        app:mwhCloseColor="#75a7ff"
+        app:mwhStartColor="#2979ff"
+        app:mwhWaveHeight="60dp" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/waveHeader"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gifImageView" />
-
-
-    <TextView
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/c_pororoca"
-        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </TextView>
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.34" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
