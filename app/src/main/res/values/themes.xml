@@ -6,7 +6,6 @@
         <item name="colorPrimaryVariant">#75a7ff</item>
         <item name="colorPrimaryDark">#004ecb</item>
 
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#81c784</item>
         <item name="colorSecondaryVariant">#b2fab4</item>
@@ -22,6 +21,5 @@
     </style>
 
     <style name="Theme.ConexaoPororocav1.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.ConexaoPororocav1.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

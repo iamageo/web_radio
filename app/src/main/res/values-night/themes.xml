@@ -7,12 +7,12 @@
         <item name="colorPrimaryVariant">#75a7ff</item>
         <item name="colorPrimaryDark">#004ecb</item>
 
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#81c784</item>
         <item name="colorSecondaryVariant">#b2fab4</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
-        <!-- Customize your theme here. -->
+
     </style>
 </resources>

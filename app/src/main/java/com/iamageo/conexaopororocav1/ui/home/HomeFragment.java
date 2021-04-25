@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+
 
 import com.iamageo.conexaopororocav1.R;
 
@@ -22,10 +22,20 @@ import java.io.IOException;
 
 public class HomeFragment extends Fragment {
 
+    //botão pay
     private Button btn_play;
 
+    //linear layout play e progress bar
+    private ProgressBar progressBarLoading;
+    private LinearLayout linearLayout;
+
+    //volume
+    private AudioManager audioManager;
+
+    //stream link
     String stream = "https://s1.guaracast.com:8427/stream";
 
+    //variaveis do carregamento da stream
     boolean prepared = false;
     boolean started = false;
 
@@ -36,6 +46,10 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         btn_play = root.findViewById(R.id.btn_play);
+        progressBarLoading = root.findViewById(R.id.pb_loading);
+        linearLayout = root.findViewById(R.id.linearLayout);
+
+        linearLayout.setVisibility(View.INVISIBLE);
 
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -48,6 +62,7 @@ public class HomeFragment extends Fragment {
                 mediaPlayer.pause();
                 btn_play.setText("PLAY");
 
+
             } else {
                 started = true;
                 mediaPlayer.start();
@@ -55,7 +70,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
 
         return root;
     }
@@ -77,12 +91,11 @@ public class HomeFragment extends Fragment {
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             super.onPostExecute(aBoolean);
+            progressBarLoading.setVisibility(View.INVISIBLE);
+            linearLayout.setVisibility(View.VISIBLE);
             btn_play.setEnabled(true);
             btn_play.setText("PLAY");
         }
-
-
-
 
     }
     @Override
@@ -104,12 +117,10 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onDestroy() {
-
         super.onDestroy();
         if(prepared) {
             mediaPlayer.release();
         }
-
 
     }
 }
