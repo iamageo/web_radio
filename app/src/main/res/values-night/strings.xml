@@ -2,4 +2,8 @@
 <resources>
     <string name="title_contato">Contato</string>
     <string name="title_site">Site</string>
+    <string name="btn_menos">-</string>
+    <string name="btn_play">play</string>
+    <string name="btn_mais">+</string>
+    <string name="todo">TODO</string>
 </resources>

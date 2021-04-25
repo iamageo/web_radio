@@ -19,12 +19,12 @@
         tools:layout_editor_absoluteX="0dp">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_mais"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/btn_play"
-            android:text="+" />
+            android:text="@string/btn_mais" />
 
         <Button
             android:id="@+id/btn_play"
@@ -32,15 +32,15 @@
             android:layout_height="80dp"
             android:layout_margin="10dp"
             android:background="@drawable/btn_play"
-            android:text="play" />
+            android:text="@string/btn_play" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_menos"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/btn_play"
-            android:text="-" />
+            android:text="@string/btn_menos" />
     </LinearLayout>
 
     <ImageView
@@ -52,7 +52,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -64,7 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <ProgressBar
         android:id="@+id/pb_loading"
