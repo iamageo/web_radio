@@ -105,6 +105,7 @@ public class HomeFragment extends Fragment {
         @Override
         protected Boolean doInBackground(String... strings) {
             try{
+                System.out.println(strings[0]);
                 mediaPlayer.setDataSource(strings[0]);
                 mediaPlayer.prepare();
                 prepared = true;

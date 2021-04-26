@@ -7,16 +7,16 @@
     tools:context=".ui.home.HomeFragment">
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:id="@+id/linearLayout"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.237"
-        tools:layout_editor_absoluteX="0dp">
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <Button
             android:id="@+id/btn_mais"
@@ -44,29 +44,26 @@
     </LinearLayout>
 
     <ImageView
+        android:layout_marginTop="20dp"
         android:id="@+id/imageView2"
         android:layout_width="308dp"
         android:layout_height="69dp"
-        android:layout_marginTop="428dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/meter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="238dp"
-        android:layout_height="238dp"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/radio"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:src="@drawable/player"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintVertical_bias="0.328"></ImageView>
 
     <ProgressBar
         android:id="@+id/pb_loading"
@@ -77,6 +74,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
