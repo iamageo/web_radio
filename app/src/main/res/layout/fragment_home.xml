@@ -56,14 +56,14 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
+        android:layout_width="383dp"
+        android:layout_height="298dp"
         android:src="@drawable/player"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328"></ImageView>
+        app:layout_constraintVertical_bias="0.219"></ImageView>
 
     <ProgressBar
         android:id="@+id/pb_loading"
