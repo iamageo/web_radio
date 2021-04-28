@@ -22,11 +22,23 @@
     <string name="title_site">Site</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="btn_menos">-</string>
+    <string name="btn_menos">vol -</string>
     <string name="btn_play">play</string>
-    <string name="btn_mais">+</string>
+    <string name="btn_mais">vol +</string>
     <string name="todo">TODO</string>
     <string name="subtitulo">Trazendo felicidade através da música todos os dias!</string>
+
+    <!-- table -->
+    <string name="segunda">Segunda-feira</string>
+    <string name="terca">Terça-feira</string>
+    <string name="quarta">Quarta-feira</string>
+    <string name="quinta">Quinta-feira</string>
+    <string name="sexta">Sexta-feira</string>
+    <string name="sabado">Sábado</string>
+    <string name="domingo">Domingo</string>
+
+    <string name="empty">Sem programação</string>
+
 
 
 </resources>
