@@ -1,10 +1,14 @@
 package com.iamageo.conexaopororocav1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.iamageo.conexaopororocav1.ui.gallery.GalleryFragment;
+import com.iamageo.conexaopororocav1.ui.home.HomeFragment;
+import com.iamageo.conexaopororocav1.ui.slideshow.SlideshowFragment;
 
 import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
@@ -44,23 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-
-                if(id == R.id.nav_site) {
-                    Toast.makeText(MainActivity.this, "clicked in site", Toast.LENGTH_SHORT).show();
-                }
-                if(id == R.id.nav_contato) {
-                    Toast.makeText(MainActivity.this, "clicked in contact", Toast.LENGTH_SHORT).show();
-                }
-
-
-                return false;
-            }
-        });
+        NavigationUI.setupWithNavController(navigationView, navController);
 
     }
 
