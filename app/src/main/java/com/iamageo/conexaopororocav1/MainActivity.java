@@ -1,7 +1,12 @@
 package com.iamageo.conexaopororocav1;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -23,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_contato: {
+                        Toast.makeText(MainActivity.this, "Menu 1", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                    case R.id.nav_site: {
+                        Toast.makeText(MainActivity.this, "Menu 2", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
