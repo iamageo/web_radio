@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,23 +28,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_contato: {
-                        Toast.makeText(MainActivity.this, "Menu 1", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.nav_site: {
-                        Toast.makeText(MainActivity.this, "Menu 2", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
@@ -55,9 +39,29 @@ public class MainActivity extends AppCompatActivity {
                 )
                 .setDrawerLayout(drawer)
                 .build();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+
+                if(id == R.id.nav_site) {
+                    Toast.makeText(MainActivity.this, "clicked in site", Toast.LENGTH_SHORT).show();
+                }
+                if(id == R.id.nav_contato) {
+                    Toast.makeText(MainActivity.this, "clicked in contact", Toast.LENGTH_SHORT).show();
+                }
+
+
+                return false;
+            }
+        });
+
     }
 
     @Override
@@ -66,4 +70,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
