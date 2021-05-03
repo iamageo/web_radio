@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
-                R.id.nav_share,
                 R.id.nav_prog,
                 R.id.nav_gallery,
                 R.id.nav_slideshow,

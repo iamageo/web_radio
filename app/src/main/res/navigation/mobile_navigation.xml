@@ -9,7 +9,7 @@
         android:id="@+id/nav_home"
         android:name="com.iamageo.conexaopororocav1.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home"/>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +22,12 @@
         android:name="com.iamageo.conexaopororocav1.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_prog"
+        android:name="com.iamageo.conexaopororocav1.ui.programation.ProgramationFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_programation" />
+
+
 </navigation>

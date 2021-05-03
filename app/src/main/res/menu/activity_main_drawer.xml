@@ -9,15 +9,11 @@
             android:icon="@drawable/ic_baseline_music_note_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_share"
-            android:title="@string/menu_share" />
-        <item
-            android:id="@+id/nav_share"
+            android:id="@+id/nav_prog"
             android:icon="@drawable/ic_baseline_calendar_today_24"
             android:title="@string/menu_prog" />
         <item
-            android:id="@+id/nav_prog"
+            android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
         <item
